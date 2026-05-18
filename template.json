@@ -1,0 +1,10 @@
+{
+  "name": "Recipe Name (e.g., Clean to Obsidian)",
+  "author": "@YourGitHubName",
+  "description": "What does this recipe do in one sentence?",
+  "trigger": "selection",
+  "action": "ai_format",
+  "api_config": {
+    "system_prompt": "You are a formatting engine..."
+  }
+}
