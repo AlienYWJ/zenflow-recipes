@@ -1,0 +1,19 @@
+name: Welcome New Recipe
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on new PR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "✨ 感谢你向 Zenflow 提交新的认知配方！\n\n系统已收到你的请求。如果你的 JSON 格式符合规范，我们将很快合并它。合并后，你的配方和头像将自动展示在 Zenflow 的全球画廊与仓库首页的【核心贡献者】榜单中。\n\nKeep what matters."
+            })
