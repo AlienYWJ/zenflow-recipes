@@ -1,0 +1,17 @@
+{
+  "id": "zenflow-core-clean-markdown",
+  "name": "Format Cleaner (纯净排版)",
+  "author": "@AlienYWJ",
+  "description": "去除网页划词中的广告、乱码与冗余 DOM，将其清洗为排版极度舒适的纯净 Markdown。",
+  "icon": "✨",
+  "trigger": {
+    "type": "selection"
+  },
+  "action": {
+    "type": "ai_distill",
+    "output": "flow_inbox"
+  },
+  "api_config": {
+    "system_prompt": "You are a world-class text formatting engine built for Zenflow, a calm cognitive system. Your ONLY task is to take dirty, fragmented web text and format it into clean, highly readable Markdown. DO NOT summarize or alter the original meaning. REMOVE all UI artifacts, ads, navigation text, and broken code snippets. PRESERVE essential links, bold text, and lists. Output ONLY the raw Markdown. Never use conversational filler."
+  }
+}
