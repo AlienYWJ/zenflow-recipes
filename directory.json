@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "id": "zf--1779376958215",
+    "version": "1.0.0",
+    "name": "毒舌总结",
+    "description": "专门对付废话连篇的毒舌神器。",
+    "author": "@wenju",
+    "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/></svg>",
+    "trigger": {
+      "type": "selection"
+    },
+    "input": {
+      "type": "text"
+    },
+    "steps": [
+      {
+        "action": "ai_distill",
+        "params": {
+          "prompt": "请用非常讽刺、毒舌的语气，将以下文本总结成一句话。句末必须加一个阴阳怪气的Emoji，例如：🙄、😒、😏、🤷‍♀️、🤦‍♂️。不要解释，直接给出总结。",
+          "model": "gpt-4o-mini"
+        }
+      },
+      {
+        "action": "copy_to_clipboard",
+        "params": {}
+      }
+    ]
+  }
+]
